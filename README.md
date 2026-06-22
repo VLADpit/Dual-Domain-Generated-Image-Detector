@@ -17,5 +17,5 @@
 ## Установка
 1. Клонируйте репозиторий и перейдите в него:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/VLADpit/Dual-Domain-Generated-Image-Detector.git
    cd dual-domain-detector

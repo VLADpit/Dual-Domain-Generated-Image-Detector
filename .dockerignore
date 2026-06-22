@@ -1,0 +1,8 @@
+.venv/
+dataset/
+.gitignore
+.vscode/
+*.md
+*.pth
+*.pt
+*.ipynb

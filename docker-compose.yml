@@ -1,0 +1,21 @@
+services:
+  detector-api:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: dual-domain-detector
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./weights:/app/weights
+    environment:
+      - MODEL_PATH=/app/weights/best_model_dual_domain.pth
+      - IMG_SIZE=256
+    restart: unless-stopped
+    deploy:
+       resources:
+         reservations:
+           devices:
+             - driver: nvidia
+               count: 1
+               capabilities: [gpu]

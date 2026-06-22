@@ -23,15 +23,17 @@
        │                                                                              ├─► [ Fusion ] ─► [ Classifier (Real/Fake) ]
        └─► [ Frequency Branch ] ─► FFT -> LogMag -> BiHPF ─► Conv2D -> Pool ...  ─────┘
             (Ищет сеточные артефакты, аномалии в спектре )
+```
+
 
 ## Установка
 1. Клонируйте репозиторий и перейдите в него:
    ```bash
    git clone https://github.com/VLADpit/Dual-Domain-Generated-Image-Detector.git
    cd dual-domain-detector
+   ```
 
 ## Запуск
-
 ### Вариант 1:Python
 1. **Установка зависимостей:**
    ```bash
@@ -44,7 +46,6 @@
    ```text
    best_model_dual_domain.pth
    ```
-
 3. **Запуск сервера:**
    ```bash
    uvicorn app:app --host 0.0.0.0 --port 8000 --reload
@@ -56,7 +57,6 @@
    ```text
    ./weights/best_model_dual_domain.pth
    ```
-
 2. **Запуск через Docker Compose:**
    ```bash
    docker compose up --build -d
